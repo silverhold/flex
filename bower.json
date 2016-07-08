@@ -1,0 +1,38 @@
+{
+  "name": "trowel-flex",
+  "homepage": "https://github.com/Trowel/flex",
+  "authors": [
+    "Loïc Goyet <loic@troopers.email>"
+  ],
+  "description": "A sass helper to manage flexbox layouts",
+  "main": [
+    "src/scss/flex.scss",
+    
+    "dest/css/flex.css",
+    
+    "injector.json"
+  ],
+  
+  "keywords": [
+    "scss",
+    "css",
+    
+    
+    
+    
+    "trowel",
+    "trowel-flex",
+    "flex"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trowel/flex.git"
+  }
+}

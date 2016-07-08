@@ -1,0 +1,13 @@
+{
+  "stylevendors": [
+    "@bower/trowel-flex/src/scss/flex.scss"
+  ],
+  
+  
+  "stylegui": [
+    "@bower/trowel-flex/gui/flex-gui.scss"
+  ],
+  "templategui": [
+    "@bower/trowel-flex/gui/flex-gui.html.twig"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "trowel-flex",
+  "version": "0.0.0",
+  "description": "A sass helper to manage flexbox layouts",
+  "scripts": {
+    "test": "gulp",
+    "dev": "gulp watch",
+    "register": "bower register trowel-flex https://github.com/Trowel/flex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trowel/flex.git"
+  },
+  "author": "Loïc Goyet <loic@troopers.email>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Trowel/flex/issues"
+  },
+  "files": [
+    "src/scss/flex.scss",
+    "dest/css/flex.css",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "trowel",
+    "trowel-flex",
+    "flex"
+  ],
+  "homepage": "https://github.com/Trowel/flex#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "run-sequence": "^1.2.2"
+  }
+}
