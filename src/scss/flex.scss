@@ -1,5 +1,28 @@
 @import 'variables';
+@import 'functions';
+@import 'mixins';
 
-/**
- * flex
- */
+@if $flex-helpers--generate {
+  .flex-container {
+    @include flex-container;
+  }
+
+
+  .flex-item {
+    @include flex-item;
+  }
+
+  @each $object, $properties in $flex-bible {
+    @if map-get($properties, 'values') != false {
+      @each $value in map-get($properties, 'values') {
+        $selector-value: str-replace(#{$value}, 'px');
+        $selector-value: str-replace($selector-value, '%', 'p');
+        $selector: '.flex-' + map-get($properties, 'context') + '--' + $object + '-' + $selector-value;
+        @debug $selector;
+        #{$selector} {
+          #{map-get($properties, 'name')}: $value;
+        }
+      }
+    }
+  }
+}

@@ -9,7 +9,6 @@ flex is designed with the trowel philosophy. Please refer to the [Trowel documen
 ### Download
 You can easily install trowel-flex by using Bower, a package manager for front-end components. (See bower.io for more details)
 
-`bower install trowel-thumbnail`
 ```bash
 $ bower install trowel-flex
 ```

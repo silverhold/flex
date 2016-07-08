@@ -1,1 +1,75 @@
-// Here comes all the variables for the sass style
+$flex-config--base: (
+  'gutter': 30px,
+  'direction': row,
+  'wrap': wrap,
+  'justify': flex-start,
+  'align': flex-start,
+  'grow': 0,
+  'shrink': 1,
+  'basis': auto,
+) !default;
+
+$flex-config: (
+  'gutter': (
+    'default': 20px,
+    'sm': 30px,
+  ),
+  'direction': (
+    'default': column,
+    'sm': row,
+  ),
+) !default;
+
+$flex-helpers--generate: true !default;
+$flex-helpers--directions: (row, row-reverse, column, column-reverse) !default;
+$flex-helpers--wraps: (nowrap, wrap, wrap-reverse, column-reverse) !default;
+$flex-helpers--justifies: (flex-start, flex-end, center, space-between, space-around) !default;
+$flex-helpers--aligns: (flex-start, flex-end, center, stretch, baseline) !default;
+$flex-helpers--grows: (0, 1, 2, 3) !default;
+$flex-helpers--shrinks: (0, 1, 2, 3) !default;
+$flex-helpers--bases: (auto, 100px, 200px, 25%) !default;
+
+$flex-bible: (
+  'direction': (
+    'context': 'container',
+    'name': 'flex-direction',
+    'default': row,
+    'values': $flex-helpers--directions,
+  ),
+  'wrap': (
+    'context': 'container',
+    'name': 'flex-wrap',
+    'default': nowrap,
+    'values': $flex-helpers--wraps,
+  ),
+  'justify': (
+    'context': 'container',
+    'name': 'justify-content',
+    'default': flex-start,
+    'values': $flex-helpers--justifies,
+  ),
+  'align': (
+    'context': 'container',
+    'name': 'align-items',
+    'default': stretch,
+    'values': $flex-helpers--aligns,
+  ),
+  'grow': (
+    'context': 'item',
+    'name': 'flex-grow',
+    'default': 0,
+    'values': $flex-helpers--grows,
+  ),
+  'shrink': (
+    'context': 'item',
+    'name': 'flex-shrink',
+    'default': 1,
+    'values': $flex-helpers--shrinks,
+  ),
+  'basis': (
+    'context': 'item',
+    'name': 'flex-basis',
+    'default': auto,
+    'values': $flex-helpers--bases,
+  ),
+);

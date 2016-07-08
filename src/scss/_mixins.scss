@@ -1,0 +1,72 @@
+@mixin flex-declaration($property, $value, $context, $force-generation: false) {
+  @if $property == 'gutter' and $value != 0 {
+    @if $context == 'container' {
+      @include gutter-row($value);
+    }
+
+    @if $context == 'item' {
+      @include gutter-col($value, true);
+    }
+  } @else {
+    // check if the declaration has to be made depending of the $context.
+    @if $context == flex-bible-value($property, 'context') and ($force-generation or $value != flex-bible-value($property, 'default')) {
+      #{flex-bible-value($property, 'name')}: $value;
+    }
+  }
+}
+
+@mixin flex-block($config, $context) {
+  // We regroup into $responsive-properties, all properties responsive that will
+  // be generated after.
+  $responsive-properties: ();
+  @each $property, $value in $config {
+    @if type-of($value) == 'map' {
+      $refactor-value: ();
+      @each $tag, $value in $value {
+        $refactor-value: map-merge($refactor-value, ($tag: ($property: $value)));
+      }
+
+      @each $tag, $declaration in $refactor-value {
+        @if map-has-key($responsive-properties, $tag) {
+          $tag-declarations: map-get($responsive-properties, $tag);
+          $tag-declarations: map-merge($tag-declarations, $declaration);
+          $responsive-properties: map-merge($responsive-properties, ($tag: $tag-declarations));
+        } @else {
+          $responsive-properties: map-merge($responsive-properties, ($tag: $declaration));
+        }
+      }
+    } @else {
+      @include flex-declaration($property, $value, $context);
+    }
+  }
+
+  @each $tag, $declarations in $responsive-properties {
+    @if $tag == 'default' {
+      @each $property, $value in $declarations {
+        @include flex-declaration($property, $value, $context);
+      }
+    } @else {
+      @include media-query($tag, 'mobile-first') {
+        @each $property, $value in $declarations {
+          @include flex-declaration($property, $value, $context, true);
+        }
+      }
+    }
+  }
+}
+
+@mixin flex-item($config: $flex-config) {
+  $config: map-merge($flex-config--base, $config);
+  @include flex-block($config, 'item');
+}
+
+@mixin flex-container($config: $flex-config) {
+  display: flex;
+
+  $config: map-merge($flex-config--base, $config);
+  @include flex-block($config, 'container');
+
+  > * {
+    @include flex-item($config);
+  }
+}

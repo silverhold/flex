@@ -1,0 +1,4 @@
+@function flex-bible-value($property, $value) {
+  $property-map: map-get($flex-bible, $property);
+  @return map-get($property-map, $value);
+}
