@@ -18,7 +18,6 @@
         $selector-value: str-replace(#{$value}, 'px');
         $selector-value: str-replace($selector-value, '%', 'p');
         $selector: '.flex-' + map-get($properties, 'context') + '--' + $object + '-' + $selector-value;
-        @debug $selector;
         #{$selector} {
           #{map-get($properties, 'name')}: $value;
         }
