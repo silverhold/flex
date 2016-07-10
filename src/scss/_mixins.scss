@@ -1,7 +1,7 @@
 @mixin flex-declaration($property, $value, $context, $force-generation: false) {
   @if $property == 'gutter' and $value != 0 {
     @if $context == 'container' {
-      @include gutter-row($value);
+      @include gutter-row($value, true);
     }
 
     @if $context == 'item' {
