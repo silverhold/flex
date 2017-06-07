@@ -1,6 +1,6 @@
 {
-  "name": "trowel-flex",
-  "homepage": "https://github.com/Trowel/flex",
+  "name": "silverhold-flex",
+  "homepage": "https://github.com/silverhold/flex",
   "authors": [
     "Loïc Goyet <loic@troopers.email>"
   ],
@@ -13,8 +13,8 @@
   "keywords": [
     "scss",
     "css",
-    "trowel",
-    "trowel-flex",
+    "silverhold",
+    "silverhold-flex",
     "flex"
   ],
   "license": "MIT",
@@ -26,10 +26,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trowel/flex.git"
+    "url": "git+https://github.com/silverhold/flex.git"
   },
   "dependencies": {
-    "trowel-bucket": "^1.5.0",
-    "trowel-responsive": "^1.2.1"
+    "silverhold-bucket": "^1.5.0",
+    "silverhold-responsive": "^1.2.1"
   }
 }

@@ -1,20 +1,20 @@
 {
-  "name": "trowel-flex",
+  "name": "silverhold-flex",
   "version": "0.0.0",
   "description": "A sass helper to manage flexbox layouts",
   "scripts": {
     "test": "gulp",
     "dev": "gulp watch",
-    "register": "bower register trowel-flex https://github.com/Trowel/flex"
+    "register": "bower register silverhold-flex https://github.com/silverhold/flex"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trowel/flex.git"
+    "url": "git+https://github.com/silverhold/flex.git"
   },
   "author": "Loïc Goyet <loic@troopers.email>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Trowel/flex/issues"
+    "url": "https://github.com/silverhold/flex/issues"
   },
   "files": [
     "src/scss/flex.scss",
@@ -24,11 +24,11 @@
   "keywords": [
     "scss",
     "css",
-    "trowel",
-    "trowel-flex",
+    "silverhold",
+    "silverhold-flex",
     "flex"
   ],
-  "homepage": "https://github.com/Trowel/flex#readme",
+  "homepage": "https://github.com/silverhold/flex#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
